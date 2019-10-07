@@ -29,9 +29,9 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  const postData = req.body;
-  db("posts")
-    .insert(postData, "id")
+  const accountData = req.body;
+  db("accounts")
+    .insert(accountData, "id")
     .then(ids => {
       res.status(200).json(ids);
     })
